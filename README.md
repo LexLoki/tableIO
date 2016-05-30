@@ -1,12 +1,12 @@
 # tableIO
 Writes Lua table to (not necessarily) .lua file, using io functions.
 
-It writes all key,values where the values are of any of these types:
+It writes all (key,value) pairs where value is of any of these types:
 * `number`
 * `string`
 * `boolean`.
 
-Values of type `function` or `nil` will be skipped.
+Values of type `function` or `nil` will be skipped (not written).
 
 Tables saved as .lua can be read using `require`.
 
