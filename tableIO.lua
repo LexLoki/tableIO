@@ -30,7 +30,7 @@ function tableIO.tableToString(t)
 	return getString(t)
 end
 
---[[ tableIO.tableToString
+--[[ tableIO.stringToTable
 Converts a tableIO serialization string to a table
 -
 Params:
