@@ -4,7 +4,7 @@ tableIO aims to be a simple lib to help saving application data from table files
 * Serialize table to string, so it can be saved on .txt file and be read later.
 * Deserialize a string created with tableIO.
 
-Serialization is essentially useful if you want to save data with another save mechanism instead of Lua's I/O, like [love.filesystem](https://love2d.org/wiki/love.filesystem) from [LÖVE](https://love2d.org/) game engine. (in this case is still possible to directly save and require the `.lua`, if instead of `require`, you use [love.filesystem.load](https://love2d.org/wiki/love.filesystem.load).
+Serialization is essentially useful if you want to save data with another save mechanism instead of Lua's I/O, like [love.filesystem](https://love2d.org/wiki/love.filesystem) from [LÖVE](https://love2d.org/) game engine. (in this case is still possible to directly save and require the `.lua`, if instead of `require`, you use [love.filesystem.load](https://love2d.org/wiki/love.filesystem.load)).
 
 tableIO writes or serializes all (key,value) pairs where value is of any of these types:
 * `number`
