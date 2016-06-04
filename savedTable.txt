@@ -1,0 +1,22 @@
+{	
+	'point' = {		
+		'x' = 0,
+		'label' = 'originPoint',
+		'z' = 0,
+		'y' = 0
+	},
+	'i_am_boolean' = true,
+	'name' = 'myTable',
+	'randomNumbers' = {		
+		1 = 43,
+		2 = 20,
+		3 = 40,
+		4 = 40,
+		5 = 46,
+		6 = 10,
+		7 = 17,
+		8 = 39,
+		9 = 14,
+		10 = 28
+	}
+}

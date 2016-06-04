@@ -1,23 +1,23 @@
 local table = {
-	name = 'myTable',
 	point = {
-		y = 0,
 		x = 0,
+		label = 'originPoint',
 		z = 0,
-		label = 'originPoint'
+		y = 0
 	},
 	i_am_boolean = true,
+	name = 'myTable',
 	randomNumbers = {
+		43,
+		20,
 		40,
-		35,
-		30,
-		38,
-		5,
-		34,
+		40,
+		46,
+		10,
 		17,
-		37,
-		22,
-		29
+		39,
+		14,
+		28
 	}
 }
 
