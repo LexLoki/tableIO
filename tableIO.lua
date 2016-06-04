@@ -93,7 +93,7 @@ function tableIO.save(t,path,name)
 end
 
 ------------------------------------------
--- Public functions
+-- Private functions and data
 ------------------------------------------
 
 write = function(v,file)
