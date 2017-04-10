@@ -6,7 +6,7 @@
 --  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 -- Script to write table to file
--- Version 1.0 - 2016/05/22
+-- Version 1.2 - 2017/04/10
 
 local tableIO = {}
 
@@ -159,10 +159,11 @@ function getTable(lines,idx)
 	local strs,key,value,c
 	while line~='}' do
 		strs = {}
-		for i in string.gmatch(line,'[^%s=]+') do print(i) table.insert(strs,i) end
+		for i in string.gmatch(line,'[^=]+') do table.insert(strs,i) end
+		strs[1] = strs[1]:sub(1,strs[1]:len()-1)
+		strs[2] = strs[2]:sub(2)
 		if string.sub(strs[1],1,1)=="'" then key = string.sub(strs[1],2,string.len(strs[1])-1)
 		else key = tonumber(strs[1]) end
-		print(line)
 		c = string.sub(strs[2],1,1)
 		if c=="'" then t[key] = string.sub(strs[2],2,string.len(strs[2])-1)
 		elseif c=='{' then t[key],idx = getTable(lines,idx)
