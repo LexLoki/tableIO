@@ -17,9 +17,9 @@ Values of type `function` or `nil` will naturally get skipped (not written). It'
 * Tables saved as .lua can be read using `require`.
 * Tables saved with a serialized string in a .txt can be extracted with a read('*all') call with a file opened with the .txt path. For detailed implementation see `main.lua`.
 
-##Usage
+## Usage
 tableIO contains 4 functions that can be called:
-###`save`
+### `save`
 Saves table with io in a given path. Specially useful to save the table and `require` it when needed.
 
 Parameters:
@@ -31,7 +31,7 @@ Returns:
 * `boolean`: whether or not the save operation was successfull
 * `string`: when not successfull, the error message, otherwise, nil
 
-###`saveOnFile`
+### `saveOnFile`
 Save a table to a opened file.
 
 Parameters:
@@ -43,7 +43,7 @@ Returns:
 * `boolean`: whether or not the save operation was successfull
 * `string`: when not successfull, the error message, otherwise, nil
 
-###`tableToString`
+### `tableToString`
 Gets the tableIO serialization string of a given table. Can be written to a file to be read later.
 
 Parameters:
@@ -53,7 +53,7 @@ Parameters:
 Returns:
 * `string`: the tableIO serialization of the table
 
-###`stringToTable`
+### `stringToTable`
 Converts a tableIO serialization string to a table.
 
 Parameters:
@@ -62,17 +62,17 @@ Parameters:
 Returns:
 * `table`: the conversion of the string
 
-###Saving
+### Saving
 Simply require the script and call the save function:
 ```Lua
   local tableIO = require 'tableIO'
   tableIO.save({key1 = 20, key2 = 'hello_world'},'myPath.lua')
 ```
-###Reading
+### Reading
 Require the file, using the path where it was saved
 ```Lua
   local myTable = require 'myPath'
 ```
 
-##Example
+## Example
 A more complete example, including serialization and deserialization is available in `main.lua`
